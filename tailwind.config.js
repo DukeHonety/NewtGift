@@ -1,5 +1,6 @@
+
+
 const colors = require('tailwindcss/colors')
-const scrollbarHide = require('tailwind-scrollbar-hide')
 
 function range(start, end, increment = 1) {
   const count = Math.floor((end - start + 1) / increment);
@@ -35,33 +36,8 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-        'regal-yellow' : '#facb99',
-        'trans-yellow' : '#facb9f',
-        'dark-yellow' : '#9c622e',
-      alto: '#e0e0e0',
-      gray:'#F5F4F5',
-      lightblue:'#F5F6F8',
-      lightpink:'#FFEDF5',
-      lightpurple:'#F1EEFC',
-      blueviolet:'#836E89',
-      blackviolet:'#310E3A',
-      cornflowerblue:'#95CFD5',
-      coral:'#FD7E50',
-      paarl: '#9C622E',
-      corvette: '#FACB99',
-      rope: '#8D531F',
-      codgray1: '#060606',
-      codgray2: '#141414',
-      goldsand: '#E8B580',
-      slategray: '#768299',
-      
-      darkblue: '#6F849B',
-      sunshade: '#FEA027',
-      darkgray:'#0F1422',
-      pink:'#FD4D96',
-      orange:'#FE8B43',
-      purple:'#7855E5',
-      salmon: '#FD765E'
+      pink: '#7335FD',
+      blue: '#6366F1'
     },
     spacing: {
       ...range(minSpacingPixel, maxSpacingPixel, spacingPixelIncrement).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {})
@@ -989,8 +965,5 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [
-    scrollbarHide
-  ],
 }
 
