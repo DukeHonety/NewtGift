@@ -14,3 +14,10 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Cabin";
+  src: local("Cabin"),
+   url('./core/fonts/cabin/Cabin-Regular.ttf') format("truetype");
+  font-weight: regular;
+}

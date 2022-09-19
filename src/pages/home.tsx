@@ -6,17 +6,19 @@ import bgTopImg from '../assets/img/righttop.svg';
 import bgBottomImg from '../assets/img/leftbottom.svg';
 import { homeInfoProp } from '../core/interface';
 import { projectInfos } from '../core/home';
+import { MainForm } from './mainform';
+
 export const HomePage = () => {
   return (
     <div>
-      <div className="w-full h-screen">
-        <div className="absolute w-full h-full bg-gradient-to-r from-blue/10 to-blue/10 flex items-center justify-center left-0">
-          <img src={bgImg} className="h-960 max-h-full p-25"/>
+      <div className="w-full h-screen max-h-[1060px] overflow-hidden">
+        <div className="absolute w-full h-full max-h-[1060px] bg-gradient-to-r from-blue/10 to-blue/10 flex items-center justify-center left-0 overflow-hidden">
+          <img src={bgImg} className="h-960 p-25"/>
           <img src={bgTopImg} className="absolute top-0 right-0 h-960"/>
           <img src={bgBottomImg} className="absolute bottom-0 left-0 h-960"/>
         </div>
-        <div className="w-full">
-          
+        <div className="w-full h-full flex justify-center items-center">
+          <MainForm />
         </div>
       </div>
       <div className='max-w-[1350px] mx-auto'>
@@ -40,6 +42,16 @@ export const HomePage = () => {
           }
             
         </Grid>
+      </div>
+      <div className="mt-70 bg-gradient-to-r from-pinkorange/10 to-pinkocd/10 p-40">
+        <div className='max-w-[1510px] mx-auto text-center text-24 font-medium text-salute/80'>
+          <p><span className="text-24 font-bold text-salute">* *Conditions Apply</span>: ONLY valid in the 48 contiguous U.S. states. Limited to one free bottle of each product per Amazon account and household. Offer valid only for customers that purchased the product at full price from the official seller account on <span className="text-pink">Amazon.com</span>. To qualify, applicants need to complete our feedback survey on the product they have been using for the previous 7 days or more.</p>
+          <p className="text-center text-28 font-bold text-salute my-15">Offer available to U.S residents only.</p>
+          <p>This offer is not dependent on leaving a review on any place nor the quality or manner of feedback that you provide.</p>
+        </div>
+      </div>
+      <div className="p-20 text-center bg-grey text-white text-16 font-medium">
+        © 2022 EasyRebate. All rights reserved.
       </div>
     </div>
   )
