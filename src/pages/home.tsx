@@ -3,19 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { homeInfoProp } from '../core/interface';
 import { projectInfos } from '../core/home';
-import { MainForm } from './mainform';
-import { RecentUse } from './RecentUse';
-import { PhoneInput } from './PhoneInput';
-import { EmailInput } from './EmailInput';
-import { EnjoyType } from './EnjoyType';
-export const HomePage = () => {
+import MainForm from './mainform';
+
+const HomePage = () => {
   return (
     <div>
       <MainForm />
-      <RecentUse />
-      <EnjoyType />
-      <PhoneInput />
-      <EmailInput />
       <div className='max-w-[1350px] mx-auto'>
         <div className="text-48 font-bold text-center my-80 font-merriweather text-salute">Frequently Asked Questions</div>
         <Grid container spacing={3} lg={12} md={12} sm={12} xs={12} justify="space-around">
@@ -51,3 +44,5 @@ export const HomePage = () => {
     </div>
   )
 }
+
+export default HomePage;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bgImg from '../assets/img/mainimg.png';
 import bgTopImg from '../assets/img/righttop.svg';
 import bgBottomImg from '../assets/img/leftbottom.svg';
@@ -5,7 +6,7 @@ import bgBottomImg from '../assets/img/leftbottom.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
-export const MainForm = () => {
+const MainForm = () => {
   return (
     <div className="w-full h-screen max-h-[1060px] overflow-hidden">
       <div className="absolute w-full h-full max-h-[1060px] bg-gradient-to-r from-blue/10 to-blue/10 flex items-center justify-center left-0 overflow-hidden">
@@ -23,7 +24,7 @@ export const MainForm = () => {
           <div className="font-dmsans">
             <input type="text" className="w-full h-70 text-salute text-20 rounded-12 my-20 border border-violetwatter focus:border-violetwatter text-center" placeholder='NAME'/>
             <input type="text" className="w-full h-70 text-salute text-20 rounded-12 my-20 border border-violetwatter focus:border-violetwatter text-center" placeholder='Amazon Order Number'/>
-            <button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">CLAIM!</button>
+            <Link to="/recentuse"><button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">CLAIM!</button></Link>
           </div>
           <div className="flex font-dmsans">
             <p><FontAwesomeIcon icon={faCircleInfo} className="mr-10"/></p>
@@ -36,3 +37,5 @@ export const MainForm = () => {
     </div>
   );
 }
+
+export default MainForm;

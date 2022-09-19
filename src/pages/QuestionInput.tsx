@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 import bgImg from '../assets/img/mainimg.png';
 import bgTopImg from '../assets/img/righttop.svg';
 import bgBottomImg from '../assets/img/leftbottom.svg';
@@ -6,8 +7,7 @@ import bgBottomImg from '../assets/img/leftbottom.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
-export const QuestionInput = () => {
-  const [status, setStatus] = useState('none');
+const QuestionInput = () => {
   const btnStyle = 'w-full h-70 text-salute text-20 font-medium rounded-12 my-20 border border-violetwatter text-center hover:bg-salute/10 ';
   return (
     <div className="w-full h-screen max-h-[1060px] overflow-hidden">
@@ -22,22 +22,14 @@ export const QuestionInput = () => {
             <p className="text-26 font-bold text-center text-salute">Questions, Comments, Concerns</p>
           </div>
           <div className="font-dmsans mt-20 mx-20">
-            <textarea placeholder='OPTIONAL' className="h-160">
-
+            <textarea placeholder='OPTIONAL' className="h-160 w-full text-center font-dmsans text-20">
             </textarea>
-            <button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">NEXT</button>
+            <Link to="/reward"><button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">NEXT</button></Link>
           </div>
-          {
-            status == 'none' &&
-            (<div className="flex font-dmsans">
-              <p className="text-sunset font-bold font-merriweather text-center">
-                <FontAwesomeIcon icon={faCircleInfo} className="mr-10"/>
-                You must use our product for at least 7 days to continue!
-              </p>
-            </div>)
-          }
         </div>
       </div>
     </div>
   );
 }
+
+export default QuestionInput;

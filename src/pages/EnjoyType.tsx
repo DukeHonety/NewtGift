@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import bgImg from '../assets/img/mainimg.png';
 import bgTopImg from '../assets/img/righttop.svg';
 import bgBottomImg from '../assets/img/leftbottom.svg';
 import StarOnImg from '../assets/img/star_on.png';
 import StarOffImg from '../assets/img/star_off.png';
 
-export const EnjoyType = () => {
+const EnjoyType = () => {
   const [currentLevel, SetLevel] = useState(0);
   const starAry = [0,1,2,3,4];
   return (
@@ -43,10 +44,12 @@ export const EnjoyType = () => {
           }
           </div>
           <div className="font-dmsans">
-            <button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">NEXT</button>
+            <Link to="/question"><button type="button" className="w-full h-70 text-white text-24 font-bold font-sans bg-gradient-to-r from-pinkorange to-pinkocd rounded-12 my-20">NEXT</button></Link>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default EnjoyType;
