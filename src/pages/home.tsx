@@ -1,28 +1,23 @@
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import bgImg from '../assets/img/mainimg.png';
-import bgTopImg from '../assets/img/righttop.svg';
-import bgBottomImg from '../assets/img/leftbottom.svg';
 import { homeInfoProp } from '../core/interface';
 import { projectInfos } from '../core/home';
 import { MainForm } from './mainform';
-
+import { RecentUse } from './RecentUse';
+import { PhoneInput } from './PhoneInput';
+import { EmailInput } from './EmailInput';
+import { EnjoyType } from './EnjoyType';
 export const HomePage = () => {
   return (
     <div>
-      <div className="w-full h-screen max-h-[1060px] overflow-hidden">
-        <div className="absolute w-full h-full max-h-[1060px] bg-gradient-to-r from-blue/10 to-blue/10 flex items-center justify-center left-0 overflow-hidden">
-          <img src={bgImg} className="h-960 p-25"/>
-          <img src={bgTopImg} className="absolute top-0 right-0 h-960"/>
-          <img src={bgBottomImg} className="absolute bottom-0 left-0 h-960"/>
-        </div>
-        <div className="w-full h-full flex justify-center items-center">
-          <MainForm />
-        </div>
-      </div>
+      <MainForm />
+      <RecentUse />
+      <EnjoyType />
+      <PhoneInput />
+      <EmailInput />
       <div className='max-w-[1350px] mx-auto'>
-        <div className="text-48 font-bold text-center my-80">Frequently Asked Questions</div>
+        <div className="text-48 font-bold text-center my-80 font-merriweather text-salute">Frequently Asked Questions</div>
         <Grid container spacing={3} lg={12} md={12} sm={12} xs={12} justify="space-around">
           {
             projectInfos.map((info:homeInfoProp) => {
@@ -35,7 +30,7 @@ export const HomePage = () => {
                     {info.title}
                     <FontAwesomeIcon icon={faArrowRight} />
                   </p>
-                  <p className="text-16 text-nightpurple text-sans">{info.description}</p>
+                  <p className="text-16 text-nightpurple text-dmsans">{info.description}</p>
                 </Grid>
               );
             })

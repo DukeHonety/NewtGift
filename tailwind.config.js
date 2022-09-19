@@ -45,6 +45,7 @@ module.exports = {
       salute: '#272B36',
       violetwatter: '#D3D6E5',
       grey: '#3C3943',
+      sunset: '#FF5D29',
     },
     spacing: {
       ...range(minSpacingPixel, maxSpacingPixel, spacingPixelIncrement).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {}),
@@ -224,9 +225,9 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
-      sans: ['DM Sans'],
+      dmsans: ['DM Sans'],
       merriweather: ['Merriweather'],
-      
+      calistoga: ['Calistoga'],
     },
     fontSize: {
       ...range(minFontSize, maxFontSize).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {}),
