@@ -37,10 +37,12 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       pink: '#7335FD',
-      blue: '#6366F1'
+      blue: '#6366F1',
+      tristesse: '#0B0F19',
+      nightpurple: '#565973',
     },
     spacing: {
-      ...range(minSpacingPixel, maxSpacingPixel, spacingPixelIncrement).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {})
+      ...range(minSpacingPixel, maxSpacingPixel, spacingPixelIncrement).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {}),
     },
     animation: {
       none: 'none',
@@ -140,17 +142,9 @@ module.exports = {
       8: '8px',
     },
     boxShadow: {
-      sendMessage: '0px 9px 17px rgba(0, 0, 0, 0.25);',
       default: '0px 8px 8px rgba(253, 77, 160, 0.1)',
-      arrowtask: '0px 9px 17px #DA6013',
-      arrowfile: '0px 9px 17px #5328D9',
-      messageBox: '0px 9px 17px rgba(151, 166, 183, 0.4)',
-      companyPlus: '0px 4px 14px rgba(254, 139, 67, 0.66)',
-      md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      homeinfoicon: '0px 8px 18px -8px rgba(99, 102, 241, 0.9)',
+      homeinfo: '0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03)',
       none: 'none',
     },
     textUnderlineOffset: {
@@ -230,34 +224,9 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
-      sans: [
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: [
-        'ui-monospace',
-        'SFMono-Regular',
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace',
-      ],
-      cabin: ['Cabin'],
+      sans: ['DM Sans'],
+      merriweather: ['Merriweather'],
+      
     },
     fontSize: {
       ...range(minFontSize, maxFontSize).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {}),

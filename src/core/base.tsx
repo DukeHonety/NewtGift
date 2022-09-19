@@ -1,0 +1,1 @@
+import { homeInfoProp } from "./interface";
