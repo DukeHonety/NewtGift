@@ -15,9 +15,11 @@ const HomePage = () => {
           {
             projectInfos.map((info:homeInfoProp, index:number) => {
               return (
-                <Grid item lg={6} md={6} sm={12} xs={12} className="relative p-40 mt-80 rounded-15 shadow-homeinfo" key={index}>
-                  <div className="absolute -top-40 w-80 h-80 bg-pink rounded-15 flex justify-center items-center shadow-homeinfoicon mb-24">
-                    <img src={info.img} className="w-42 h-37"/>
+                <Grid item lg={6} md={6} sm={12} xs={12} className="relative p-40 mx-25 md:mx-0 mt-80 rounded-15 shadow-homeinfo" key={index}>
+                  <div className="absolute -top-40 left-0 w-full h-80 flex justify-center">
+                    <div className="w-80 h-80 bg-pink rounded-15 flex justify-center items-center shadow-homeinfoicon mb-24">
+                      <img src={info.img} className="w-42 h-37"/>
+                    </div>
                   </div>
                   <p className="text-26 font-bold text-tristesse my-16 text-merriweather flex items-center">
                     {info.title}
