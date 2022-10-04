@@ -8,7 +8,7 @@ const LastStep = () => {
     <div className="w-full h-screen min-h-[860px] overflow-hidden">
       <BackgroundImg />
       <div className="w-full h-full flex justify-center items-center">
-        <div className="max-w-680 bg-white/15 p-40 px-60 rounded-30 backdrop-blur-24">
+        <div className="max-w-680 bg-white/15 p-40 px-60 mx-25 rounded-30 backdrop-blur-24">
           <div className='flex flex-col justify-center mx-20'>
             <p className="text-48 font-bold text-center text-salute font-merriweather my-10">Last Step!</p>
             <p className="text-26 font-bold text-center text-salute/60 font-merriweather my-10">Leave us a review on Amazon!</p>
