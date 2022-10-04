@@ -12,7 +12,7 @@ export const projectInfos:homeInfoProp[] = [
     },
     {
         img: detailImg2,
-        title: 'Is it really FREE?',
+        title: 'What\'s the catch?',
         description: 'There isn\'t one! We only ask that you give us private feedback about the product you purchased (only takes 1 minute) so we can continuously improve our products to meet the needs of our customers.'
     },
     {

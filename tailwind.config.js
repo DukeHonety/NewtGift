@@ -435,6 +435,7 @@ module.exports = {
       wide: '0.025em',
       wider: '0.05em',
       widest: '0.1em',
+      ...range(0, 100, 1).reduce((merged, f) => ({ ...merged, [f]: `${f/100}em` }), {}),
     },
     lineHeight: {
       none: '1',
@@ -451,6 +452,7 @@ module.exports = {
       8: '2rem',
       9: '2.25rem',
       10: '2.5rem',
+      120: '120%',
     },
     listStyleType: {
       none: 'none',
